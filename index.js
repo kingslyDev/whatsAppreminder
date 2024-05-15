@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 const { default: makeWASocket, useMultiFileAuthState, DisconnectReason } = require('@whiskeysockets/baileys');
 const pino = require('pino');
@@ -96,5 +95,3 @@ const PORT = process.env.PORT || 3189;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
-module.exports = app; // Export the app for Vercel
